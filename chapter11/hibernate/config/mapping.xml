@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD//EN"
+	   "file:///C:/javalibs/hibernate-2.0-rc5/src/net/sf/hibernate/hibernate-mapping-2.0.dtd">
+
+<hibernate-mapping>
+	<class name="com.apress.javapersist.chapter11.hibernate.bo.Employee" table="employees">
+		<id name="id" column="employee_id" type="long">
+			<generator class="assigned"/>
+		</id>
+		<property name="firstName" column="first_name" type="string"/>
+		<property name="lastName" column="last_name" type="string"/>
+		<property name="email" type="string"/>
+		<many-to-one name="address" column="address_id"></many-to-one>
+	</class>
+	
+	<class name="com.apress.javapersist.chapter11.hibernate.bo.Address" table="addresses">
+		<id name="id" column="address_id" type="long">
+			<generator class="assigned"/>
+		</id>
+		<property name="streetLine1" column="street_line1" type="string"/>
+		<property name="streetLine2" column="street_line2" type="string"/>
+		<property name="city" type="string"/>
+		<property name="state" type="string"/>
+		<set name="residents">
+			<key column="address_id"></key>
+			<one-to-many class="com.apress.javapersist.chapter11.hibernate.bo.Employee" />
+		</set>
+	</class>
+</hibernate-mapping>

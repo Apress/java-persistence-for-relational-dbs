@@ -1,0 +1,113 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE ejb-jar PUBLIC "-//Sun Microsystems, Inc.//DTD Enterprise JavaBeans 2.0//EN" "http://java.sun.com/dtd/ejb-jar_2_0.dtd">
+<ejb-jar id="ejb-jar_ID">
+	<display-name>Chapter 8</display-name>
+	<enterprise-beans>
+		<entity id="Address">
+			<ejb-name>Address</ejb-name>
+			<home>com.apress.javapersist.chapter08.ejbs.address.AddressHome</home>
+			<remote>com.apress.javapersist.chapter08.ejbs.address.Address</remote>
+			<local-home>com.apress.javapersist.chapter08.ejbs.address.AddressLocalHome</local-home>
+			<local>com.apress.javapersist.chapter08.ejbs.address.AddressLocal</local>
+			<ejb-class>com.apress.javapersist.chapter08.ejbs.address.AddressBean</ejb-class>
+			<persistence-type>Container</persistence-type>
+			<prim-key-class>java.lang.Long</prim-key-class>
+			<reentrant>False</reentrant>
+			<cmp-version>2.x</cmp-version>
+			<abstract-schema-name>Address</abstract-schema-name>
+			<cmp-field>
+				<field-name>id</field-name>
+			</cmp-field>
+			<cmp-field>
+				<field-name>streetLine1</field-name>
+			</cmp-field>
+			<cmp-field>
+				<field-name>streetLine2</field-name>
+			</cmp-field>
+			<cmp-field>
+				<field-name>city</field-name>
+			</cmp-field>
+			<cmp-field>
+				<field-name>state</field-name>
+			</cmp-field>
+			<primkey-field>id</primkey-field>
+			<ejb-local-ref id="EJBLocalRef_1044729389599">
+				<ejb-ref-name>ejb/Employee</ejb-ref-name>
+				<ejb-ref-type>Entity</ejb-ref-type>
+				<local-home>com.apress.javapersist.chapter08.ejbs.employee.EmployeeLocalHome</local-home>
+				<local>com.apress.javapersist.chapter08.ejbs.employee.EmployeeLocal</local>
+				<ejb-link>Employee</ejb-link>
+			</ejb-local-ref>
+		</entity>
+		<entity id="Employee">
+			<ejb-name>Employee</ejb-name>
+			<home>com.apress.javapersist.chapter08.ejbs.employee.EmployeeHome</home>
+			<remote>com.apress.javapersist.chapter08.ejbs.employee.Employee</remote>
+			<local-home>com.apress.javapersist.chapter08.ejbs.employee.EmployeeLocalHome</local-home>
+			<local>com.apress.javapersist.chapter08.ejbs.employee.EmployeeLocal</local>
+			<ejb-class>com.apress.javapersist.chapter08.ejbs.employee.EmployeeBean</ejb-class>
+			<persistence-type>Container</persistence-type>
+			<prim-key-class>java.lang.Long</prim-key-class>
+			<reentrant>False</reentrant>
+			<cmp-version>2.x</cmp-version>
+			<abstract-schema-name>Employee</abstract-schema-name>
+			<cmp-field>
+				<field-name>id</field-name>
+			</cmp-field>
+			<cmp-field>
+				<field-name>firstName</field-name>
+			</cmp-field>
+			<cmp-field>
+				<field-name>lastName</field-name>
+			</cmp-field>
+			<cmp-field>
+				<field-name>email</field-name>
+			</cmp-field>
+			<primkey-field>id</primkey-field>
+			<ejb-local-ref id="EJBLocalRef_1044729389619">
+				<ejb-ref-name>ejb/Address</ejb-ref-name>
+				<ejb-ref-type>Entity</ejb-ref-type>
+				<local-home>com.apress.javapersist.chapter08.ejbs.address.AddressLocalHome</local-home>
+				<local>com.apress.javapersist.chapter08.ejbs.address.AddressLocal</local>
+				<ejb-link>Address</ejb-link>
+			</ejb-local-ref>
+			<query>
+				<description></description>
+				<query-method>
+					<method-name>findByLastName</method-name>
+					<method-params>
+						<method-param>java.lang.String</method-param>
+					</method-params>
+				</query-method>
+				<ejb-ql>select object(e) from Employee e where e.lastName = ?1</ejb-ql>
+			</query>
+		</entity>
+	</enterprise-beans>
+	<relationships>
+		<ejb-relation>
+			<description></description>
+			<ejb-relation-name>Residents Relationship</ejb-relation-name>
+			<ejb-relationship-role>
+				<ejb-relationship-role-name>employee</ejb-relationship-role-name>
+				<multiplicity>One</multiplicity>
+				<relationship-role-source>
+					<ejb-name>Address</ejb-name>
+				</relationship-role-source>
+				<cmr-field>
+					<cmr-field-name>employee</cmr-field-name>
+					<cmr-field-type>java.util.Collection</cmr-field-type>
+				</cmr-field>
+			</ejb-relationship-role>
+			<ejb-relationship-role>
+				<ejb-relationship-role-name>address</ejb-relationship-role-name>
+				<multiplicity>Many</multiplicity>
+				<relationship-role-source>
+					<ejb-name>Employee</ejb-name>
+				</relationship-role-source>
+				<cmr-field>
+					<cmr-field-name>address</cmr-field-name>
+				</cmr-field>
+			</ejb-relationship-role>
+		</ejb-relation>
+	</relationships>
+</ejb-jar>

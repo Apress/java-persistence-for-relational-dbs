@@ -1,0 +1,3 @@
+Manage.cmd add Employee 10 Rick Sperko rick@sperko.com 
+Manage.cmd list Employee "select from employee in class com.apress.javapersist.chapter11.hibernate.bo.Employee where employee.id=10" 
+Manage.cmd assoc Employee "select from employee in class com.apress.javapersist.chapter11.hibernate.bo.Employee where employee.id=10" Address "select from address in class com.apress.javapersist.chapter11.hibernate.bo.Address where address.id = 111" 

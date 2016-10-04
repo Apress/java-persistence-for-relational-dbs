@@ -1,0 +1,16 @@
+package com.apress.javapersistence.chapter07;
+
+import junit.framework.TestCase;
+
+public class TestTaxCalculator extends TestCase {
+    public void testCalculateTax() {
+        double amount = 10;
+        double expected = amount * TaxCalculator.TAX;
+        
+        TaxCalculator calculator = new TaxCalculator();
+        
+        double result = calculator.calculateTax(amount);
+        
+        assertEquals(expected, result);
+    }
+}

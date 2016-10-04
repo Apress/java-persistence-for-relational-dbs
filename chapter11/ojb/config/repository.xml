@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- This is a sample metadata repository for the ObJectBridge System.
+     Use this file as a template for building your own mappings-->
+
+<!-- defining entities for include-files -->
+<!DOCTYPE descriptor-repository SYSTEM "repository.dtd" [
+<!ENTITY database SYSTEM "repository_database.xml">
+<!ENTITY internal SYSTEM "repository_internal.xml">
+<!ENTITY user SYSTEM "repository_user.xml">
+]>
+
+
+<descriptor-repository version="0.9.9" isolation-level="read-uncommitted">
+
+   <!-- include all used database connections -->
+    &database;
+
+    <!-- include ojb internal mappings here -->
+    &internal;
+
+    <!-- include user defined mappings here -->
+    &user;
+
+</descriptor-repository>

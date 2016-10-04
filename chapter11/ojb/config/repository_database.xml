@@ -1,0 +1,12 @@
+<jdbc-connection-descriptor
+	platform="MySQL"
+   	jdbc-level="2.0"
+   	driver="com.mysql.jdbc.Driver"
+   	protocol="jdbc"
+   	subprotocol="mysql"
+   	dbalias="//localhost/chapter11_ojb"
+   	username="root"
+   	password="password"
+   	jcd-alias="chapter11"
+   	default-connection="true"
+/>

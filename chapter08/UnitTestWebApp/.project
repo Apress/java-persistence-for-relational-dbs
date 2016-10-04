@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<projectDescription>
+	<name>Chapter 8 Tests</name>
+	<comment></comment>
+	<projects>
+		<project>Chapter 8</project>
+	</projects>
+	<buildSpec>
+		<buildCommand>
+			<name>com.ibm.etools.webtools.LibDirBuilder</name>
+			<arguments>
+			</arguments>
+		</buildCommand>
+		<buildCommand>
+			<name>org.eclipse.jdt.core.javabuilder</name>
+			<arguments>
+			</arguments>
+		</buildCommand>
+		<buildCommand>
+			<name>com.ibm.etools.webtools.additions.linksbuilder</name>
+			<arguments>
+			</arguments>
+		</buildCommand>
+		<buildCommand>
+			<name>com.ibm.etools.validation.validationbuilder</name>
+			<arguments>
+			</arguments>
+		</buildCommand>
+		<buildCommand>
+			<name>com.ibm.etools.j2ee.LibCopyBuilder</name>
+			<arguments>
+			</arguments>
+		</buildCommand>
+		<buildCommand>
+			<name>com.ibm.etools.ctc.serviceprojectbuilder</name>
+			<arguments>
+			</arguments>
+		</buildCommand>
+	</buildSpec>
+	<natures>
+		<nature>com.ibm.etools.beaninfo.BeaninfoNature</nature>
+		<nature>com.ibm.etools.beaninfo.BeaninfoNature</nature>
+		<nature>com.ibm.etools.j2ee.WebNature</nature>
+		<nature>org.eclipse.jdt.core.javanature</nature>
+		<nature>com.ibm.etools.ctc.javaprojectnature</nature>
+	</natures>
+</projectDescription>

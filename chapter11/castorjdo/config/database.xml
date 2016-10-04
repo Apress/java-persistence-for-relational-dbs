@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE database PUBLIC "-//EXOLAB/Castor JDO Configuration DTD Version 1.0//EN"
+	"http://castor.exolab.org/mapping.dtd">
+<database name="chapter11" engine="mysql">
+    <driver class-name="com.mysql.jdbc.Driver"
+            url="jdbc:mysql://localhost/chapter11_castorjdo">
+      <param name="user" value="root" />
+      <param name="password" value="password" />
+    </driver>
+    <mapping href="address.xml" />
+    <mapping href="employee.xml" />
+</database>

@@ -1,0 +1,49 @@
+<!-- Definitions for com.apress.javapersist.chapter11.ojb.bo.Employee -->
+<class-descriptor class="com.apress.javapersist.chapter11.ojb.bo.Employee"
+  table="employees">
+    <field-descriptor name="id"
+        column="employee_id"
+        jdbc-type="BIGINT"
+        primarykey="true" />
+    <field-descriptor name="firstName"
+        column="first_name"
+        jdbc-type="VARCHAR" />
+    <field-descriptor name="lastName"
+        column="last_name"
+        jdbc-type="VARCHAR" />
+    <field-descriptor name="email"
+        column="email"
+        jdbc-type="VARCHAR" />
+    <field-descriptor name="addressId"
+        column="address_id"
+        jdbc-type="BIGINT" />
+    <reference-descriptor name="address"
+        class-ref="com.apress.javapersist.chapter11.ojb.bo.Address">
+        <foreignkey field-ref="addressId"/>
+    </reference-descriptor>
+</class-descriptor>
+
+<!-- Definitions for com.apress.javapersist.chapter11.ojb.bo.Address-->
+<class-descriptor class="com.apress.javapersist.chapter11.ojb.bo.Address"
+  table="addresses">
+    <field-descriptor name="id"
+        column="address_id"
+        jdbc-type="BIGINT"
+        primarykey="true" />
+    <field-descriptor name="streetLine1"
+        column="street_line1"
+        jdbc-type="VARCHAR" />
+    <field-descriptor name="streetLine2"
+        column="street_line2"
+        jdbc-type="VARCHAR" />
+    <field-descriptor name="city"
+        column="city"
+        jdbc-type="VARCHAR" />
+    <field-descriptor name="state"
+        column="state"
+        jdbc-type="VARCHAR"/>
+    <collection-descriptor name="residents" 
+        element-class-ref="com.apress.javapersist.chapter11.ojb.bo.Employee">
+        <inverse-foreignkey field-ref="addressId" />
+    </collection-descriptor>
+</class-descriptor>

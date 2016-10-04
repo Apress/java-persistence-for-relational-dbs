@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<classpath>
+    <classpathentry kind="var"
+        path="SERVERJDK_50_PLUGINDIR/jre/lib/rt.jar"
+        rootpath="SERVERJDK_SRCROOT" sourcepath="SERVERJDK_50_PLUGINDIR/src.jar"/>
+    <classpathentry kind="src" path="Java Source"/>
+    <classpathentry kind="var" path="WAS_50_PLUGINDIR/lib/j2ee.jar"/>
+    <classpathentry kind="var" path="WAS_50_PLUGINDIR/lib/servletevent.jar"/>
+    <classpathentry kind="var" path="WAS_50_PLUGINDIR/lib/ivjejb35.jar"/>
+    <classpathentry kind="var" path="WAS_50_PLUGINDIR/lib/runtime.jar"/>
+    <classpathentry exported="true" kind="src" path="/Chapter 8"/>
+    <classpathentry kind="lib" path="Web Content/WEB-INF/lib/cactus-1.4.1.jar"/>
+    <classpathentry kind="lib" path="Web Content/WEB-INF/lib/commons-logging-1.0.jar"/>
+    <classpathentry kind="lib" path="Web Content/WEB-INF/lib/aspectjrt-1.0.5.jar"/>
+    <classpathentry kind="lib" path="Web Content/WEB-INF/lib/servletapi-2.3.jar"/>
+    <classpathentry kind="lib" path="Web Content/WEB-INF/lib/junit.jar"/>
+    <classpathentry kind="lib" path="Web Content/WEB-INF/lib/commons-httpclient-2.0alpha1-20020606.jar"/>
+    <classpathentry kind="output" path="Web Content\WEB-INF\classes"/>
+</classpath>

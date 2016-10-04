@@ -1,0 +1,3 @@
+set CLASSPATH=.;C:\kodo-jdo-2.4.0\lib\jdo1_0.jar;C:\kodo-jdo-2.4.0\lib\kodo-jdo.jar;C:\kodo-jdo-2.4.0\lib\kodo-jdo-runtime.jar;C:\kodo-jdo-2.4.0\lib\serp.jar;C:\kodo-jdo-2.4.0\lib\xalan.jar;C:\kodo-jdo-2.4.0\lib\xercesImpl.jar;C:\kodo-jdo-2.4.0\lib\xml-apis.jar;C:\kodo-jdo-2.4.0\lib\jakarta-commons-logging-1.0.2.jar;C:\kodo-jdo-2.4.0;C:\kodo-jdo-2.4.0\lib\jdbc2_0-stdext.jar;C:\kodo-jdo-2.4.0\lib\jdbc-hsql-1_7_0.jar
+set JAVA_HOME=C:\jdk1.3.1_06
+set Path=C:\jdk1.3.1_06\bin;C:\kodo-jdo-2.4.0\bin;C:\WINDOWS\system32;C:\WINDOWS;C:\WINDOWS\system32\WBEM;C:\Program Files\Common Files\Adaptec Shared\System;C:\Program Files\Microsoft SQL Server\80\Tools\BINN

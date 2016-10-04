@@ -1,0 +1,11 @@
+<?xml version="1.0"?>
+<!DOCTYPE jdo SYSTEM "jdo.dtd">
+<jdo>
+    <package name="com.apress.javapersist.chapter10.bo">
+        <class name="Address">
+            <field name="residents">
+              <collection element-type="Employee"/>
+            </field>
+        </class>
+    </package>
+</jdo>

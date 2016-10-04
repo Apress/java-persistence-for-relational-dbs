@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+
+<!-- Created by rsperko on March 6, 2002, 1:19 PM -->
+<!DOCTYPE mapping PUBLIC "-//EXOLAB/Castor Mapping DTD Version 1.0//EN"
+                           "http://castor.exolab.org/mapping.dtd">
+<mapping>
+  <!--  Mapping for Employee  -->
+  <class name="com.centare.timesheet.bo.Employee"
+         identity="uid" key-generator="MAX">
+    <description>Employee Object</description>
+    <map-to table="employees"/>
+    <field name="uid" type="integer" >
+      <sql name="employee_id" type="integer"/>
+    </field>
+    <field name="networkId" type="string">
+      <sql name="network_id" type="char" dirty="check" />
+    </field>
+    <field name="firstName" type="string">
+      <sql name="first_name" type="char" dirty="check" />
+    </field>
+    <field name="lastName" type="string">
+      <sql name="last_name" type="char" dirty="check" />
+    </field>
+    <field name="email" type="string">
+      <sql name="email" type="char" dirty="check" />
+    </field>
+  </class>
+</mapping>

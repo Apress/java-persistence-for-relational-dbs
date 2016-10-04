@@ -1,0 +1,24 @@
+/*
+ *  FastObjects Trial Edition ODMG SDK for the Java(tm) Platform
+ *  Copyright (C) 1996-2002 by Poet Software. All rights reserved.
+ *
+ *  First example options file
+ *
+ */
+
+[schemata\odmg_schema]
+oneFile = false			 
+name = odmg_schema
+
+[databases\odmg_base]
+oneFile = false
+
+[classes\com.apress.javapersist.chapter09.bo.ZipCode]
+persistent = true		; must be specified, don't forget it! 
+
+[classes\com.apress.javapersist.chapter09.bo.Address]
+persistent = true		; must be specified, don't forget it! 
+
+[classes\com.apress.javapersist.chapter09.bo.Employee]
+persistent = true		; must be specified, don't forget it! 
+hasExtent = true

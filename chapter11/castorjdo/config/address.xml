@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapping PUBLIC "-//EXOLAB/Castor Object Mapping DTD Version 1.0//EN"
+                         "http://castor.exolab.org/mapping.dtd">
+<mapping>
+
+    <class name="com.apress.javapersist.chapter11.castorjdo.bo.Address"
+    	 identity="id">
+
+        <map-to table="addresses" />
+
+        <field name="id" type="long">
+            <sql name="address_id" type="bigint" />
+        </field>
+
+        <field name="streetLine1" type="string">
+            <sql name="street_line1" type="char" />
+        </field>
+
+        <field name="streetLine2" type="string">
+            <sql name="street_line2" type="char" />
+        </field>
+
+        <field name="city" type="string">
+            <sql name="city" type="char" />
+        </field>
+
+        <field name="state" type="string">
+            <sql name="state" type="char" />
+        </field>
+
+        <field name="residents"  required="true"
+        	collection="set"
+        	type="com.apress.javapersist.chapter11.castorjdo.bo.Employee">
+        	<sql many-key="address_id" />
+        </field>
+    </class>
+
+</mapping>

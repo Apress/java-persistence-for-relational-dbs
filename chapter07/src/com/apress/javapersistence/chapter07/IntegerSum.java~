@@ -1,0 +1,9 @@
+package com.apress.javapersistence.chapter07;
+
+public class TaxCalculator {
+    public static final double TAX = 5.5;
+    
+    public double calculateTax(double amount) {
+        return amount * TAX;
+    }
+}

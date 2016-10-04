@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE web-app PUBLIC "-//Sun Microsystems, Inc.//DTD Web Application 2.3//EN" "http://java.sun.com/dtd/web-app_2_3.dtd">
+<web-app id="WebApp">
+	<display-name>Chapter 8 Tests</display-name>
+  <servlet>
+      <servlet-name>ServletRedirector</servlet-name>
+      <display-name>ServletRedirector</display-name>
+      <servlet-class>org.apache.cactus.server.ServletTestRedirector</servlet-class>
+      <init-param>
+        <param-name>param1</param-name>
+        <param-value>value1 used for testing</param-value>
+      </init-param>
+  </servlet>
+  
+  <servlet>
+      <servlet-name>ServletTestRunner</servlet-name>
+      <display-name>ServletTestRunner</display-name>
+      <servlet-class>org.apache.cactus.server.runner.ServletTestRunner</servlet-class>
+  </servlet>
+  
+  <servlet>
+      <servlet-name>SampleServlet</servlet-name>
+      <display-name>SampleServlet</display-name>
+      <servlet-class>com.centare.strongbrownbag.cactus.SampleServlet</servlet-class>
+  </servlet>
+  
+  
+  <servlet-mapping>
+      <servlet-name>ServletRedirector</servlet-name>
+      <url-pattern>/ServletRedirector</url-pattern>
+  </servlet-mapping>
+  
+  <servlet-mapping>
+      <servlet-name>ServletTestRunner</servlet-name>
+      <url-pattern>/ServletTestRunner</url-pattern>
+  </servlet-mapping>
+  
+  <servlet-mapping>
+      <servlet-name>SampleServlet</servlet-name>
+      <url-pattern>/SampleServlet</url-pattern>
+  </servlet-mapping>
+	<welcome-file-list>
+		<welcome-file>index.html</welcome-file>
+		<welcome-file>index.htm</welcome-file>
+		<welcome-file>index.jsp</welcome-file>
+		<welcome-file>default.html</welcome-file>
+		<welcome-file>default.htm</welcome-file>
+		<welcome-file>default.jsp</welcome-file>
+	</welcome-file-list>
+	
+	<ejb-local-ref id="EJBLocalRef_1045707690198">
+		<ejb-ref-name>ejb/Address</ejb-ref-name>
+		<ejb-ref-type>Entity</ejb-ref-type>
+		<local-home>com.apress.javapersist.chapter08.ejbs.address.AddressLocalHome</local-home>
+		<local>com.apress.javapersist.chapter08.ejbs.address.AddressLocal</local>
+		<ejb-link>Chapter_8.jar#Address</ejb-link>
+	</ejb-local-ref>
+	
+	<ejb-local-ref id="EJBLocalRef_1045707690208">
+		<ejb-ref-name>ejb/Employee</ejb-ref-name>
+		<ejb-ref-type>Entity</ejb-ref-type>
+		<local-home>com.apress.javapersist.chapter08.ejbs.employee.EmployeeLocalHome</local-home>
+		<local>com.apress.javapersist.chapter08.ejbs.employee.EmployeeLocal</local>
+		<ejb-link>Chapter_8.jar#Employee</ejb-link>
+	</ejb-local-ref>
+
+</web-app>

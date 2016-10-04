@@ -1,0 +1,61 @@
+/*
+ * ShoppingCartTest.java
+ * JUnit based test
+ *
+ * Created on October 1, 2002, 7:55 PM
+ */
+
+package com.apress.javapersistence.chapter07.bo;
+
+import junit.framework.*;
+
+/**
+ *
+ * @author rsperko
+ */
+public class TestShoppingCart extends TestCase {
+
+    
+    public TestShoppingCart(String testName) {
+        super(testName);
+    }
+    
+    public void testAddItem() throws Exception {
+        ShoppingCart cart = new ShoppingCart("fakeuid");
+        Item item = new Item();
+        cart.addItem(item);
+        assertEquals(1, cart.getNumberItems() );
+        assertEquals(item, cart.getItem( 0 ) );
+    }
+/*
+    public void testCalculateTotal() throws Exception {
+	USMoney price1 = new USMoney( 1, 50 );
+	USMoney price2 = new USMoney( 2, 30 );
+	USMoney price3 = new USMoney( 3, 50 );
+
+	USMoney total = price1.addTo( price2 );
+	total = total.addTo( price3 );
+
+	ShoppingCart cart = new ShoppingCart();
+	Item item1 = new Item();
+	item1.setPrice( price1 );
+	cart.addItem( item1 );
+	Item item2 = new Item();
+	item2.setPrice( price2 );
+	cart.addItem( item2 );
+	Item item3 = new Item();
+	item3.setPrice( price3 );
+	cart.addItem( item3 );
+
+	assertEquals( total, cart.getTotalPrice() );
+    }
+  */  
+    public static void main(String[] args) {
+        junit.textui.TestRunner.run(suite());
+    }
+    
+    public static Test suite() {
+        TestSuite suite = new TestSuite(TestShoppingCart.class);
+        return suite;
+    }
+}

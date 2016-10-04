@@ -1,0 +1,2 @@
+Manage.cmd assoc Employee id equals 11 Address id equals 121 
+Manage.cmd list Employee id equals 11 
